@@ -269,3 +269,11 @@
         </div>
     </section>
 </div>
+<script src="<?=base_url('assets/dist')?>/assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="<?=base_url('assets/dist')?>/assets/js/pages/dashboard.js"></script>
+
+<script type="text/javascript">
+    element = document.getElementById("dashboard_menu");
+    element.classList.add("active");
+
+</script>

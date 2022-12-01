@@ -91,7 +91,7 @@ class Admin extends BaseController
 
       $google_client->setClientSecret($_ENV['ClientSecret']); //Define your Client Secret Key
 
-      $google_client->setRedirectUri("https://development.sl/adm"); //Define your Redirect Uri
+      $google_client->setRedirectUri("http://development.sl/adm"); //Define your Redirect Uri
 
       $google_client->addScope('email');
 
@@ -147,18 +147,22 @@ class Admin extends BaseController
                 $userModel->insert($data_baru);
                 $riwayat = "User ".$userInfo['name']." berhasil terdaftar sebagai Administrator";
                 $this->changelog($riwayat);
+                $this->session->set('login_data', $data_baru);
+
               }else{
-                $data_baru['email'] = $userInfo['email'];
-                $data_baru['nama_depan'] = $userInfo['givenName'];
-                $data_baru['nama_belakang'] = $userInfo['familyName'];
-                $data_baru['profile_picture'] = $userInfo['picture'];
-                $data_baru['status'] = 0;
-                $data_baru['level'] = 0;
-                $userModel->insert($data_baru);
-                $riwayat = "User ".$userInfo['name']." berhasil terdaftar sebagai User(belum terverifikasi)";
-                $this->changelog($riwayat);
+                // $data_baru['email'] = $userInfo['email'];
+                // $data_baru['nama_depan'] = $userInfo['givenName'];
+                // $data_baru['nama_belakang'] = $userInfo['familyName'];
+                // $data_baru['profile_picture'] = $userInfo['picture'];
+                // $data_baru['status'] = 0;
+                // $data_baru['level'] = 0;
+                // $userModel->insert($data_baru);
+                // $riwayat = "User ".$userInfo['name']." berhasil terdaftar sebagai User(belum terverifikasi)";
+                // $this->changelog($riwayat);
+                $riwayat = "User ".$userInfo['name']." Login gagal, (user tidak terdaftar)";
+                 $this->session->setFlashdata('login_error', "unauthorized google account.");
+
               }
-              $this->session->set('login_data', $data_baru);
             }
           }
 
@@ -248,10 +252,24 @@ function logout(){
   Session()->destroy();
   return Redirect()->to('adm');
 }
+public function administrator(){
+    if ($this->_make_sure_is_login()) {
+      $data['title'] = "Dashboard";
+      $profile['profile'] = $_SESSION['profile'][0];
+      $data['content'] = view('admin/content/administrator.php', $profile);
+      return view('admin/index', $data);
+    }
+}
 
-
-
-
+public function client(){
+    if ($this->_make_sure_is_login()) {
+      $data['title'] = "Dashboard";
+      $profile['profile'] = $_SESSION['profile'][0];
+      $data['content'] = view('admin/content/user.php', $profile);
+      return view('admin/index', $data);
+    }
+}
+ 
 
 
 

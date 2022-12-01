@@ -4,8 +4,7 @@
                         <p>2021 &copy; Mazer</p>
                     </div>
                     <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="https://saugi.me">Saugi</a></p>
+                        
                     </div>
                 </div>
             </footer>
@@ -15,8 +14,7 @@
     <script src="<?=base_url('assets/dist')?>/assets/js/app.js"></script>
     
 <!-- Need: Apexcharts -->
-<script src="<?=base_url('assets/dist')?>/assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="<?=base_url('assets/dist')?>/assets/js/pages/dashboard.js"></script>
+
 
 </body>
 

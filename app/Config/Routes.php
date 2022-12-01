@@ -41,6 +41,8 @@ $routes->get('/test', 'Home::test');
 $routes->get('/adm', 'Admin::index');
 $routes->get('/logout', 'Admin::logout');
 $routes->post('/adm', 'Admin::index');
+$routes->get('/adm/administrator', 'Admin::administrator');
+$routes->get('/adm/client', 'Admin::client');
 $routes->get('/adm/get_name/(:any)', 'Admin::get_name/$1');
 $routes->get('/article/(:any)', 'Home::post/$1');
 
