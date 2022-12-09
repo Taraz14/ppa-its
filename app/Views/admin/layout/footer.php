@@ -12,7 +12,7 @@
     </div>
     <script src="<?=base_url('assets/dist')?>/assets/js/bootstrap.js"></script>
     <script src="<?=base_url('assets/dist')?>/assets/js/app.js"></script>
-    
+    <script type="text/javascript" src="<?=base_url()?>/assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <!-- Need: Apexcharts -->
 
 

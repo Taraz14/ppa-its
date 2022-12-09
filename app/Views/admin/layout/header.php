@@ -7,6 +7,8 @@
     <title>Dashboard - Mazer Admin Dashboard</title>
     
     <link rel="stylesheet" href="<?=base_url('assets/dist')?>/assets/css/main/app.css">
+    <link rel="stylesheet" href="<?=base_url()?>/assets/node_modules/sweetalert2/dist/sweetalert2.min.css">
+
     <link rel="stylesheet" href="<?=base_url('assets/dist')?>/assets/css/main/app-dark.css">
     <link rel="shortcut icon" href="<?=base_url('assets/dist')?>/assets/images/logo/favicon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="<?=base_url('assets/dist')?>/assets/images/logo/favicon.png" type="image/png">
