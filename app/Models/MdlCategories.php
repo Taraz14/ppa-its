@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MdlCategories extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'mdlcategories';
+    protected $table            = 'categories';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;

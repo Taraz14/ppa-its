@@ -46,9 +46,11 @@ $routes->post('/adm/data_administrator', 'Admin::data_administrator');
 $routes->post('/adm/reset_password', 'Admin::reset_password');
 $routes->post('/adm/ubah_level_user', 'Admin::ubah_level_user');
 $routes->post('/adm/ubah_status_user', 'Admin::ubah_status_user');
+$routes->post('/adm/categories_data', 'Admin::categories_data');
 $routes->post('/adm/hapus_user', 'Admin::hapus_user');
 $routes->post('/adm/tambah_admin', 'Admin::tambah_admin');
 $routes->get('/adm/client', 'Admin::client');
+$routes->get('/adm/categories', 'Admin::categories');
 $routes->get('/adm/get_name/(:any)', 'Admin::get_name/$1');
 $routes->get('/article/(:any)', 'Home::post/$1');
 

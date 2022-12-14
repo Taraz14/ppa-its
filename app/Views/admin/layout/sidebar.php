@@ -49,7 +49,13 @@
                     <span>Client</span>
                 </a>
             </li>
-            
+            <li
+                class="sidebar-item" id="categories_menu">
+                <a href="<?=base_url('adm/categories')?>" class='sidebar-link'>
+                    <i class="bi bi-tags-fill"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
             <li
                 class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
@@ -444,14 +450,14 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Administrator</h3>
-                <p class="text-subtitle text-muted">Manage administrator website</p>
+                <h3><?=(isset($title))?$title:""?></h3>
+                <p class="text-subtitle text-muted"><?=(isset($title_desc))?$title_desc:""?></p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?=base_url('adm')?>"><?=$uri1?></a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><?=$uri2?></li>
+                        <li class="breadcrumb-item"><a href="<?=base_url('adm')?>"><?=(isset($uri1))?$uri1:""?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?=(isset($uri2))?$uri2:""?></li>
                     </ol>
                 </nav>
             </div>

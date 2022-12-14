@@ -14,8 +14,12 @@
 
                     <select class="form-control w-25 select2" aria-label="Default select example" id="select_level_user">
                     </select>
+                </div>
+                <div class="mb-3">
+                
                     <button class="btn btn-primary tambah_user">Tambah User</button>
                 </div>
+
                 <div class="table-responsive">
                     <table id="tabel_serverside" class="table table-bordered display text-center" cellspacing="0" width="100%">
                       <thead>
@@ -40,6 +44,7 @@
               </tfoot>
           </table>
       </div>
+  </div>
   </div>
 
 </section>
